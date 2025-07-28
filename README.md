@@ -2,6 +2,9 @@
 
 An interactive Power BI dashboard designed to track worker productivity, identify trends in performance, and highlight operational bottlenecks. Built to help management make data-driven decisions on labor allocation and process improvements.
 
+<img width="1450" height="819" alt="image" src="https://github.com/user-attachments/assets/0f0ab34e-e749-4c8d-ab54-129b7c005657" />
+
+
 ## ✨ Features
 - 📈 **Real-Time Productivity Tracking**: Displays daily and weekly performance across departments or individual workers.
 - 📊 **KPI Monitoring**: Visualizes key productivity metrics such as average output per worker and target completion rates.

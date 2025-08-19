@@ -47,4 +47,4 @@ An interactive Power BI dashboard designed to track worker productivity, identif
 ## 👤 Author
 **Joel Perez**  
 - 🌐 [GitHub](https://github.com/JoelProjectHub)  
-- 💼 [LinkedIn](https://linkedin.com/in/YOUR-LINK)  
+- 💼 [LinkedIn](linkedin.com/in/joel-perez-43617b257)  

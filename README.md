@@ -1,50 +1,41 @@
-# 📊 Worker Productivity Dashboard (Power BI)
+# Worker Productivity Dashboard
 
-An interactive Power BI dashboard designed to track worker productivity, identify trends in performance, and highlight operational bottlenecks. Built to help management make data-driven decisions on labor allocation and process improvements.
+A Power BI dashboard for tracking labor productivity across vehicle processing facilities. It measures how efficiently labor is scheduled and used relative to the number of vehicles released, and lets operations drill into the data by facility, car line, process, and time period.
 
-<img width="1450" height="819" alt="image" src="https://github.com/user-attachments/assets/0f0ab34e-e749-4c8d-ab54-129b7c005657" />
+![Productivity Dashboard](1782323967326_image.png)
 
+## What it does
 
-## ✨ Features
-- 📈 **Real-Time Productivity Tracking**: Displays daily and weekly performance across departments or individual workers.
-- 📊 **KPI Monitoring**: Visualizes key productivity metrics such as average output per worker and target completion rates.
-- 🛠️ **Trend Analysis**: Identifies patterns over time to support forecasting and resource planning.
-- 📆 **Time-Based Insights**: Filters and compares productivity across custom date ranges.
+Vehicle processing runs on labor — vehicles need a set amount of work, and that work has to be scheduled and assigned to staff. This dashboard answers a few operational questions:
 
-## 🛠️ Tech & Tools
-- **Power BI**: Dashboard creation and DAX measures.
-- **SQL / Power Query**: Data extraction and transformation.
-- **Excel Integration**: For legacy data and dynamic input sources.
-- **DAX**: Calculations for rolling averages, productivity rates, and concern point percentages.
+- Is labor being scheduled to match what's actually needed?
+- How much labor are we spending per vehicle released, and is that trending up or down?
+- Are production staff being fully assigned, or is there slack in the schedule?
+- How do these numbers break down across facilities and car lines?
 
-## 📂 Dashboard Highlights
-- **Overview Page**: Key KPIs and summary stats for quick insights.
-- **Trend Analysis Page**: Productivity trends by date, worker, and department.
-- **Top Issues Page**: Identifies most common operational concerns and defect categories.
-- **Drillthrough Reports**: Deep dive into specific workers or dates to investigate anomalies.
+## Key metrics
 
-## 🚀 How It Works
-1. Data is extracted from internal databases and Excel files.
-2. Power Query cleans and normalizes the data.
-3. DAX measures calculate KPIs such as:
-   - Average Productivity Rate
-   - Concern Points %
-   - Rolling 7-Day Performance
-4. Interactive visuals allow management to filter by date, department, and worker.
+The top row tracks the headline KPIs, each with 7-day and 30-day period-over-period comparisons and a trend strip across This Week, prior weeks, MTD, QTD, and YTD:
 
-## 📊 Business Impact
-- Reduced manual reporting time by automating data refresh and KPI calculations.
-- Helped identify underperforming areas and allocate labor more effectively.
-- Improved visibility into daily operations, leading to proactive issue resolution.
+- **Needed / Scheduled labor** — how scheduled labor compares to labor actually needed
+- **Productivity** — produced minutes against assigned minutes
+- **Daily Plans Closed** — share of daily plans completed
+- **% Days Production Staff Fully Assigned** — how often staff are fully assigned to work
+- **Minutes per Released Vehicle** — labor spent per vehicle released, the core efficiency measure
 
-## 🔮 Future Enhancements
-- Integrate with live SQL database for automated refresh.
-- Add predictive modeling for workforce planning.
-- Incorporate drillthrough analytics for defect root cause analysis.
+## Interactivity
 
----
+- **Per-vehicle toggle** — switch the per-vehicle metric between actual *labor* minutes and *assigned* minutes to compare planned vs. real labor spend
+- **Metric selector** — the center trend chart swaps between metrics using the button panel on the right
+- **Filters** — facility, car line, process, and date range slicers on the left, consistent with the rest of the dashboard suite
+- **Summary tables** — breakdowns at the bottom split every metric out by car line and by facility for side-by-side comparison
 
-## 👤 Author
-**Joel Perez**  
-- 🌐 [GitHub](https://github.com/JoelProjectHub)  
-- 💼 [LinkedIn](linkedin.com/in/joel-perez-43617b257)  
+## Tech
+
+- Power BI · DAX · Power Query
+- Data source: [your pipeline — e.g. Microsoft Fabric lakehouse fed from AS/400 / SharePoint]
+- Refresh: [scheduled? how often?]
+
+## Notes
+
+Part of a suite of operational dashboards built for vehicle processing at Amports (Benicia Port). All dashboards in the suite share a common filter layout (facility, car line, date) for consistent navigation.

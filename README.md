@@ -2,7 +2,7 @@
 
 A Power BI dashboard for tracking labor productivity across vehicle processing facilities. It measures how efficiently labor is scheduled and used relative to the number of vehicles released, and lets operations drill into the data by facility, car line, process, and time period.
 
-![Productivity Dashboard](1782323967326_image.png)
+<img width="1276" height="610" alt="image" src="https://github.com/user-attachments/assets/84afddf8-17bc-40f2-ac6a-3fd5732d22a3" />
 
 ## What it does
 
